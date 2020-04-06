@@ -1,15 +1,30 @@
-// function person() {
-//     return function() {
-//         console.log('hello')
-//     }
-// }
+/**
+ * @author Juveria-Manzar
+ * @email juveriamanzar29@gmail.com
+ * @create date 2020-04-06 21:44:00
+ * @desc functions in JavaScript form closures. 
+ * A closure is the combination of a function and the lexical environment within which that function was declared. 
+ * This environment consists of any local variables that were in-scope at the time the closure was created.
+ */
 
-// var personGen = person()
+function person() {
+    let people = [];
 
-// personGen()
+    function defName(name) {
+        people.push(name)
+        console.log(name)
+        return people
+    }
+    return defName;
+}
 
+var personGen = person()
+personGen("juveria")
 
-// //////////////////////////////////////////////
+////////////////MODULE PATTERN//////////////////////
+/**
+ * Module pattern returns api to a user and they could use that api to interact with it  
+ */
 
 function characterController(characterName) {
     let nam = characterName;
@@ -52,4 +67,4 @@ function characterController(characterName) {
 
 var player = characterController("juveria");
 
-player.endGame() //throws error
+// player.endGame() //throws error

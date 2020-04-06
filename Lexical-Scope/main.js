@@ -5,6 +5,8 @@
  * @desc A lexical scope in JavaScript means that a variable defined outside a function 
  * can be accessible inside another function defined after the variable declaration. 
  * But the opposite is not true; the variables defined inside a function will not be accessible outside that function.
+ * word lexical refers to the fact that lexical scoping uses the location where a variable 
+ * is declared within the source code to determine where that variable is available.
  */
 
 let thing = "thing"
