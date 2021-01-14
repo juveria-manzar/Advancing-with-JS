@@ -21,4 +21,4 @@ var obj = {
 
 
 //this acts like a gaurd variable. avoids error
-obj.doSomething || obj.doSomething()
+obj.doSomething && obj.doSomething()
