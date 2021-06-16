@@ -1,6 +1,7 @@
 let fs=require('fs');
 
 function task(path){
+    //async promise
     return new Promise(function(resolve,reject){
         fs.readFile(path,function(err,data){
             if (err) reject(err);
